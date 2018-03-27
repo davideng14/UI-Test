@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/web-fonts-with-css/css/fa-solid.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/web-fonts-with-css/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-app="VotingApp">
+	<nav class="navbar navbar-expand-lg absolute-top navbar-light bg-light nav-padding">
+	  <a class="navbar-brand" href="#">Rule of Thumb.</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Past Trials</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">How It Works</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Log in/Sign Up</a>
+		    </li>
+		    <i class="fas fa-search"></i>
+		</ul>
+	  </div>
+	</nav>
+	<div class="jumbotron">
+	  <div class="row row-padding">
+	  	<div class="col-md-6 col-sm-12">
+	  		<div class="main-item" ng-controller="candidateController">
+	  			<div class="background-blur"></div>
+	  			<div class="main-item-content" >
+		  			<span class="comment">What's your opinion on</span>
+					<h1>Pope Francis?</h1>
+		  			<p>He's talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)</p>
+
+		  			<a href="">More information</a>
+
+		  			<p class="item-phrase">	What's Your Verdict? </p>
+	  			</div>
+
+	  			<div class="buttons-container">
+	  				<button ng-click="upVote()" class="up big-button">
+	  					<i class="fas fa-angle-double-up"></i>
+	  				</button>
+	  				<button ng-click="downVote()" class="down big-button">
+	  					<i class="fas fa-angle-double-down"></i>
+	  				</button>
+	  			</div>
+	  		</div>
+	  	</div>	
+	  </div>
+	</div>
+
+	<div class="container" ng-controller="mainController">
+		<h1 class="title">Votes</h1>
+		<div class="row justify-content-center row-separator" ng-repeat="candidatesByRow in candidatesGroupByRow">
+			<div class="col-md-6 col-sm-12 item-container" ng-repeat="candidate in candidatesByRow" ng-controller="candidateController">
+				<div class="item" style="background-image: url('{{candidate.image}}')">
+					<div class="info-item">
+						<h1>{{ candidate.name }}</h1>
+						<div>
+							<p class="comment">
+								<span class="time">{{ candidate.date }}</span> in {{ candidate.section }}
+							</p>
+						</div>
+						<div class="alreadyVote">
+			  				<p>{{description}}</p>
+			  			
+				  			<button ng-show="!hideElements" ng-click="upVote()" class="up button-padding ng-class:{tentativeUp: tentativeUp}">
+				  				<i class="fas fa-angle-double-up"></i>
+				  			</button>
+				  			<button ng-show="!hideElements" ng-click="downVote()" class="down button-padding ng-class:{tentativeDown: tentativeDown}">
+				  				<i class="fas fa-angle-double-down"></i>
+				  			</button>
+				  			<button ng-click="vote()" class="vote-button button-padding">
+				  				{{buttonMessage}}
+				  			</button>
+			  			</div>
+			  			<div class="result-item" ng-show="thereIsVoting">
+			  				<div class="up percentage" style="width:{{upPercentage}}">
+			  					<p> <i class="fas fa-angle-double-up"></i> {{upPercentage}}</p>
+			  				</div>
+			  				<div class="down percentage" style="width:{{downPercentage}}">
+			  					<p>{{downPercentage}} <i class="fas fa-angle-double-down"></i></p>
+			  				</div>
+			  			</div>
+		  			</div>
+		  			
+		  		</div>
+			</div>
+			<!--<div class="col-md-6">
+				<div class="item">
+					<h1>Mark Zuckerberg</h1>
+					<div class="comment">
+						<p>
+							<span class="time">1 month ago</span> in Business
+						</p>
+					</div>
+		  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+		  			<div>
+			  			<button class="up button-padding">
+			  				<i class="fas fa-angle-double-up"></i>
+			  			</button>
+			  			<button class="down button-padding">
+			  				<i class="fas fa-angle-double-down"></i>
+			  			</button>
+			  			<button class="vote-button button-padding">
+			  				Vote Now
+			  			</button>
+		  			</div>
+		  		</div>
+			</div>-->
+		</div>
+		<footer>
+			<div class="row">
+				<a href="">Terms and Conditions</a>
+				<a href="">Privacy Policy</a>
+				<a href="">Contact Us</a>
+			</div>
+		</footer>
+		<script href="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="js/app.js"></script>
+	</div>
+
+</body>
+</html>

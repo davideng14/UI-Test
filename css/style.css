@@ -1,0 +1,259 @@
+body{
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+a.navbar-brand{
+	font-size: 2em;
+}
+
+h1.title{
+	color: black;
+	padding-bottom: 1em;
+}
+
+i.fa-search{
+	color: white;
+	font-size: 2em;
+	padding-top: .3em;
+}
+
+.jumbotron{
+	background-image:url('../images/Papa.jpg');
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.black-font{
+	color: black;
+}
+
+.navbar-light .navbar-brand, 
+.navbar-light .navbar-brand:hover, 
+.navbar-light .navbar-brand:active,
+.navbar-light .navbar-brand:visited{
+	color: white;
+}
+
+.absolute-top{
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.bg-light{
+	background: transparent !important;
+}
+
+.comment{
+	font-size: .8em;
+}
+
+.main-item .comment{
+	font-size: 1em;
+	font-weight: 100;
+}
+
+.nav-padding{
+    padding: 2em 5em .5em 5em;
+}
+
+.row-padding{
+	padding: 6em 3em 0em 3em;
+}
+
+.row-separator{
+	padding-bottom: 2em;		
+}
+
+.time{
+	font-weight: 900;
+}
+
+.button-padding{
+	padding: .5em 1em
+}
+
+
+/*******
+	Butttons
+*********/
+button{
+	color: white;
+}
+
+.up{
+	background-color: #289892;
+	border: none; 
+}
+
+.down{
+	background-color: #cf952f;
+	border: none;
+}
+
+.big-button{
+	float: left;
+	width: 50%;
+	padding: 1em;
+}
+
+.up.big-button, .up.percentage{
+	background-color: rgba(44, 187, 180, .7);
+}
+
+.down.big-button, .down.percentage{
+	background-color: rgba(250, 176, 47, .7);
+}
+
+.vote-button{
+	background-color: transparent;
+	border: solid 1px white;
+	color: white;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link, 
+.navbar-expand-lg .navbar-nav .nav-link:hover, 
+.navbar-expand-lg .navbar-nav .nav-link:active,
+.navbar-expand-lg .navbar-nav .nav-link:visited{
+	padding: 1em 1.5em;
+	color: white;
+}
+
+/********
+	Item
+*********/
+
+.main-item{
+	/*background: rgba(211, 211, 211, 0.4);*/
+	background-color: transparent;
+	padding: 2em 2em 3em 2em;
+	position: relative;
+	overflow: hidden;
+}
+
+.main-item-content{
+	position: relative;
+}
+
+.background-blur{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: rgba(154, 151, 149, .7);
+	z-index: 0;
+
+	-webkit-filter: blur(5px);
+	  -moz-filter: blur(5px);
+	  -o-filter: blur(5px);
+	  -ms-filter: blur(5px);
+	  filter: blur(5px);
+
+}
+
+.main-item h1{
+	font-size: 3em;
+	padding-bottom: .5em;
+}
+
+.main-item p{
+	font-size: 1.2em;
+	letter-spacing: .1em;
+	line-height: 1.2em;
+	font-weight: 100;
+}
+
+.main-item a{
+	color: white;
+	text-decoration-line: underline;
+}
+
+.main-item .item-phrase{
+	font-weight: bold;
+}
+
+.buttons-container{
+	position: absolute; 
+	bottom: 0px; 
+	left: 0px; 
+	right: 0px;
+}
+
+.item-phrase{
+	padding: 1em 0em;
+	font-weight: bold;
+}
+
+.item{
+	background: lightgray;
+	padding-top: 15em;
+	margin-bottom: 2em; 
+	background-image:url('../images/Papa.jpg');
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.item-container{
+	position: relative;
+}
+
+.info-item{
+	background: rgba(0, 0, 0, .4);
+	padding: 2em 2em 4em 2em;
+	position: relative;
+}
+
+.percentage{
+	height: 3em;
+	float:left;
+}
+
+.result-item{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.percentage p{
+	font-size: 2em;
+	font-weight: 100;
+	margin: 0em .5em;
+}
+
+.down.percentage p{
+	text-align: right;
+}
+
+.up.percentage p{
+	text-align: left;
+}
+
+.tentativeUp, .tentativeDown{
+	border: 2px solid white;
+}
+
+/*********
+	footer
+*********/
+footer{
+	border-top: 1px lightgray dashed;
+}
+
+footer a{
+	color: lightgray;
+	padding: 2em 1em;
+	font-size: .8em;	
+}

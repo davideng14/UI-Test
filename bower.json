@@ -1,0 +1,21 @@
+{
+  "name": "UI-Test",
+  "description": "Test UI",
+  "main": "index.html",
+  "authors": [
+    "Jose Rojas"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
+}
