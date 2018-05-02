@@ -258,7 +258,7 @@ footer a{
 	font-size: .8em;	
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
  	.nav-padding{
 	    padding: 2em 2em .5em 2em;
 	}
