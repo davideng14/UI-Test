@@ -262,4 +262,8 @@ footer a{
  	.nav-padding{
 	    padding: 2em 2em .5em 2em;
 	}
+
+	.row-padding{
+		padding: 6em 0em 0em 0em;
+	}
 }
